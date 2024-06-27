@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Disposal Management System</title>
+    <link rel="stylesheet" href="database.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+<body>
+    <header>
+        <h1>Waste Disposal Management System</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('map')">Map Routes</a>
+        <a href="#" onclick="showSection('driver')">Driver Input</a>
+        <a href="#" onclick="showSection('adminLogin')">Admin</a>
+    </nav>
+    <div class="container">
+        <section id="home">
+            <h2>Welcome to the Waste Disposal Management System</h2>
+            <p>
+                Our Waste Disposal Management System is designed to enhance the efficiency and effectiveness of waste collection and disposal across cities in Uganda. By leveraging advanced mapping and GPS technologies, our system ensures that waste collection routes are optimized, reducing operational costs and improving service delivery.
+            </p>
+            <p>
+                <strong>Key Features:</strong>
+            </p>
+            <ul>
+                <li><strong>Route Mapping:</strong> Our system provides a detailed map of waste collection routes, enabling truck drivers to navigate easily and efficiently. This feature helps in minimizing travel time and fuel consumption.</li>
+                <li><strong>GPS Integration:</strong> Truck drivers can access GPS data to locate mass disposal sites quickly. This ensures that waste is disposed of in the designated areas, maintaining cleanliness and hygiene in the city.</li>
+                <li><strong>Waste Type Recording:</strong> Drivers can input the type of waste collected from different households. This helps in categorizing waste as organic, recyclable, or hazardous, facilitating appropriate disposal methods.</li>
+                <li><strong>Household Tracking:</strong> The system allows drivers to record the number of households serviced daily. This data is crucial for tracking performance and ensuring that all areas are covered systematically.</li>
+                <li><strong>Admin Panel:</strong> Administrators have the authority to edit and manage the collected data. They can statistically analyze the data to make informed decisions, ensuring the efficiency and effectiveness of waste management operations.</li>
+            </ul>
+            <p>
+                Join us in making Uganda cleaner and greener. Our system not only streamlines waste management processes but also contributes to environmental sustainability by promoting efficient waste disposal practices.
+            </p>
+        </section>
+        <section id="map" class="hidden">
+            <h2>Map Routes</h2>
+            <div id="mapContainer">
+                <div id="mapid" style="height: 600px;"></div>
+            </div>
+        </section>
+        <section id="driver" class="hidden">
+            <h2>Driver Input</h2>
+            <form id="driverForm">
+                <div>
+                    <label for="driverName">Driver Name:</label>
+                    <input type="text" id="driverName" name="driverName" required>
+                </div>
+                <div>
+                    <label for="wasteType">Type of Waste:</label>
+                    <select id="wasteType" name="wasteType" required>
+                        <option value="organic">Organic</option>
+                        <option value="recyclable">Recyclable</option>
+                        <option value="hazardous">Hazardous</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="households">Number of Households:</label>
+                    <input type="number" id="households" name="households" required>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+        <section id="adminLogin" class="hidden">
+            <h2>Admin Login</h2>
+            <form id="adminLoginForm">
+                <div>
+                    <label for="employeeNumber">Employee Number:</label>
+                    <input type="text" id="employeeNumber" name="employeeNumber" required>
+                </div>
+                <div>
+                    <label for="adminPassword">Password:</label>
+                    <input type="password" id="adminPassword" name="adminPassword" required>
+                </div>
+                <div>
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </section>
+        <section id="admin" class="hidden">
+            <h2>Admin Panel</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Driver Name</th>
+                        <th>Type of Waste</th>
+                        <th>Number of Households</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="adminTableBody">
+                    <!-- Admin data will be populated here -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="database.js"></script>
+</body>
+</html>
