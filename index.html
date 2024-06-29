@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waste Disposal Management System</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 </head>
 <body>
     <header>
@@ -13,94 +12,234 @@
     </header>
     <nav>
         <a href="#" onclick="showSection('home')">Home</a>
-        <a href="#" onclick="showSection('map')">Map Routes</a>
-        <a href="#" onclick="showSection('driver')">Driver Input</a>
-        <a href="#" onclick="showSection('adminLogin')">Admin</a>
+        <a href="#" onclick="showSection('contact')">Contact Us</a>
+        <a href="#" onclick="showSection('faq')">FAQ</a>
+        <a href="#" onclick="showSection('terms')">Terms and Conditions</a>
+        <a href="#" onclick="showSection('privacy')">Privacy Policy</a>
+        <a href="#" onclick="showSection('login')">Login/Register</a>
+        <a href="#" onclick="showSection('search')">Search</a>
+        <a href="#" onclick="showSection('map')">Map</a>
     </nav>
     <div class="container">
         <section id="home">
             <h2>Welcome to the Waste Disposal Management System</h2>
-            <p>
-                Our Waste Disposal Management System is designed to enhance the efficiency and effectiveness of waste collection and disposal across cities in Uganda. By leveraging advanced mapping and GPS technologies, our system ensures that waste collection routes are optimized, reducing operational costs and improving service delivery.
-            </p>
-            <p>
-                <strong>Key Features:</strong>
-            </p>
+            <p>Our Waste Disposal Management System is designed to enhance the efficiency and effectiveness of waste collection and disposal across cities in Uganda. By leveraging advanced mapping and GPS technologies, our system ensures that waste collection routes are optimized, reducing operational costs and improving service delivery.</p>
+            <p><strong>Key Features:</strong></p>
             <ul>
                 <li><strong>Route Mapping:</strong> Our system provides a detailed map of waste collection routes, enabling truck drivers to navigate easily and efficiently. This feature helps in minimizing travel time and fuel consumption.</li>
                 <li><strong>GPS Integration:</strong> Truck drivers can access GPS data to locate mass disposal sites quickly. This ensures that waste is disposed of in the designated areas, maintaining cleanliness and hygiene in the city.</li>
                 <li><strong>Waste Type Recording:</strong> Drivers can input the type of waste collected from different households. This helps in categorizing waste as organic, recyclable, or hazardous, facilitating appropriate disposal methods.</li>
                 <li><strong>Household Tracking:</strong> The system allows drivers to record the number of households serviced daily. This data is crucial for tracking performance and ensuring that all areas are covered systematically.</li>
+                <li><strong>Schedule Management:</strong> Administrators can manage garbage collection schedules in different areas to ensure timely and efficient waste collection.</li>
+                <li><strong>Vehicle Management:</strong> The system keeps track of the vehicles used for waste collection, their status, and the respective drivers assigned to them.</li>
                 <li><strong>Admin Panel:</strong> Administrators have the authority to edit and manage the collected data. They can statistically analyze the data to make informed decisions, ensuring the efficiency and effectiveness of waste management operations.</li>
             </ul>
-            <p>
-                Join us in making Uganda cleaner and greener. Our system not only streamlines waste management processes but also contributes to environmental sustainability by promoting efficient waste disposal practices.
-            </p>
+            <p>Join us in making Uganda cleaner and greener. Our system not only streamlines waste management processes but also contributes to environmental sustainability by promoting efficient waste disposal practices.</p>
+            <!-- Home page content -->
         </section>
-        <section id="map" class="hidden">
-            <h2>Map Routes</h2>
-            <div id="mapContainer">
-                <div id="mapid" style="height: 600px;"></div>
-            </div>
-        </section>
-        <section id="driver" class="hidden">
-            <h2>Driver Input</h2>
-            <form id="driverForm">
+        <section id="contact" class="hidden">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
                 <div>
-                    <label for="driverName">Driver Name:</label>
-                    <input type="text" id="driverName" name="driverName" required>
+                    <label for="contactName">Name:</label>
+                    <input type="text" id="contactName" name="contactName" required>
                 </div>
                 <div>
-                    <label for="wasteType">Type of Waste:</label>
-                    <select id="wasteType" name="wasteType" required>
-                        <option value="organic">Organic</option>
-                        <option value="recyclable">Recyclable</option>
-                        <option value="hazardous">Hazardous</option>
-                    </select>
+                    <label for="contactEmail">Email:</label>
+                    <input type="email" id="contactEmail" name="contactEmail" required>
                 </div>
                 <div>
-                    <label for="households">Number of Households:</label>
-                    <input type="number" id="households" name="households" required>
+                    <label for="contactMessage">Message:</label>
+                    <textarea id="contactMessage" name="contactMessage" required></textarea>
                 </div>
                 <div>
                     <button type="submit">Submit</button>
                 </div>
             </form>
         </section>
-        <section id="adminLogin" class="hidden">
-            <h2>Admin Login</h2>
-            <form id="adminLoginForm">
+        <section id="faq" class="hidden">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <p><h3>Q1: How do I log into the system?</h3></p>
+            <p>A: To log into the system, navigate login/register panel and enter your username and password. 
+                <p>If you do not have an account, please contact your administrator for assistance.</p>
+                <p><h3>Q2: What should I do if I forget my password?</h3></p>
+                <p>Contact your field supervisor to find a way forward</p>
+                <P><h3>Q3: How do I report my status and location?</h3></P>
+                <p>A: Once logged into the system, navigate to the Contact Us and raise your claim. 
+                    <P>Here, you can update your current status (e.g., en route, on-site, completed) and your location.</P> 
+                    <p>Make sure to save your updates to keep the system accurate.</p>
+            </p>
+            <!-- FAQ content -->
+        </section>
+        <section id="terms" class="hidden">
+            <h2>Terms and Conditions</h2>
+            <p><h2>Introduction</h2>
+
+                Welcome to [Your Company Name] Waste Disposal Management System. These Terms and Conditions ("Terms") govern your use of our system and services. By accessing or using our system, you agree to be bound by these Terms. If you disagree with any part of the Terms, you may not access our services.
+                
+                <p><h3>Use of Services</h3></p>
+                
+                <P><h3>1. Eligibility:</h3></P>
+                The system is intended for use by on-ground truck drivers and system administrators ("Users") only. By using our services, you confirm that you are authorized to do so by [Your Company Name].
+                
+                <P><h3>2. User Accounts:</h3></P>
+                To access certain features of our services, Users must create an account. Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account.
+                
+                <p><h2>Responsibilities</h2></p>
+                
+                <p><h3>1. Truck Drivers:</h3></p>
+                Truck drivers are responsible for:
+                
+                <p>Accurately reporting their status and location
+                    Complying with all safety and operational protocols
+                    Ensuring the proper use and maintenance of the equipment provided</p>
+                <p>2. Administrators:</p>
+                Administrators are responsible for:
+                
+                <p>Managing user accounts and access permissions</p>
+                <p>Monitoring system performance and resolving issues</p>
+                <p>Ensuring data integrity and security</p>
+                
+                <p><h2>Intellectual Property</h2></p>
+                
+                <p><h3>1. Ownership:</h3></p>
+                All content, features, and functionality of our services, including but not limited to text, graphics, logos, and software, are the property of [Your Company Name] and are protected by intellectual property laws.
+                
+                <P><h3>2. License:</h3></P>
+                We grant Users a limited, non-exclusive, non-transferable license to access and use our services for the purpose of waste disposal management. Users may not reproduce, distribute, modify, or create derivative works from our content without our express written permission.
+                
+                <p><h2>Disclaimers and Limitation of Liability</h2></p>
+                
+                <p><h3>1. Disclaimer of Warranties:</h3></p>
+                Our services are provided "as is" and "as available" without any warranties of any kind, either express or implied. We do not warrant that our services will be uninterrupted, error-free, or secure.
+                
+                <p><h3>2. Limitation of Liability:</h3></p>
+                To the fullest extent permitted by law, [Your Company Name] shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (a) your use of our services; (b) any unauthorized access to or use of our servers and/or any personal information stored therein; (c) any interruption or cessation of transmission to or from our services; (d) any bugs, viruses, trojan horses, or the like that may be transmitted to or through our services by any third party; (e) any errors or omissions in any content; and/or (f) any defamatory, offensive, or illegal conduct of any third party.
+                
+                <p><h2>Changes to Terms</h2></p>
+                
+                We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least [30 days'] notice before any new terms take effect. By continuing to access or use our services after those revisions become effective, you agree to be bound by the revised terms.
+                
+                <p><h2>Contact Us</h2></p>
+                
+                If you have any questions about these Terms, please contact us at:
+                
+                <p>NEMA</p>
+                <p>Kyaliwajjala-Wakiso</p>
+                <p>wdms.org.ug</p> 
+                <p>02033007667</p>
+            </p>
+            <!-- Terms and conditions content -->
+        </section>
+        <section id="privacy" class="hidden">
+            <h2>Privacy Policy</h2>
+            
+            <P><h2>Introduction</h2>
+
+                Welcome to the Waste Disposal Management System. We value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services. By using our services, you consent to the data practices described in this policy.
+                
+                <p><h2>Information We Collect</h2></p>
+                
+                We may collect the following types of information:
+                
+               <p> <h2>1. Personal Information:</h2></p>
+                
+                Name,
+                Phone number,
+                Physical address,
+                Employee ID 
+                <p><h2>1. Usage Data:</h2></p>
+                
+                IP address
+                Browser type and version
+                Pages visited
+                Time and date of visit
+                Time spent on pages
+               <p> <h2>3. Location Data:</h2></p>
+                
+                <P>We may collect and store information about your location if you give us permission to do so. You can enable or disable location services when you use our service at any time through your device settings.
+                    How We Use Your Information</P>
+                
+                <p>We use the information we collect for various purposes, including:</p>
+                
+                <p>To provide and maintain our services</p>
+                <p>To notify you about changes to our services</p>
+                <p>To allow you to participate in interactive features of our services</p>
+                <p>To provide user support</p>
+                <p>To gather analysis or valuable information so that we can improve our services</p>
+                <p>To monitor the usage of our services</p>
+                <p>To detect, prevent, and address technical issues</p>
+                <p>To fulfill any other purpose for which you provide it</p>
+                <p><h2>Sharing Your Information</h2></p>
+                
+                <p>We do not sell, trade, or otherwise transfer to outside parties your Personally Identifiable Information unless we provide users with advance notice.</p> 
+                <P>This does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or serving our users, so long as those parties agree to keep this information confidential.</P> 
+                <p>We may also release information when its release is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property, or safety.</p>
+                
+                <p><h2>Security of Your Information</h2></p>
+                
+                We use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse.
+                
+                <p><h2>Your Data Protection Rights</h2></p>
+                
+                Depending on your location, you may have the following rights regarding your personal data:
+                
+                The right to access – You have the right to request copies of your personal data.
+                The right to rectification – You have the right to request that we correct any information you believe is inaccurate or complete information you believe</P>
+             
+        </section>
+        <section id="login" class="hidden">
+            <h2>Login/Register</h2>
+            <form id="loginForm">
                 <div>
-                    <label for="employeeNumber">Employee Number:</label>
-                    <input type="text" id="employeeNumber" name="employeeNumber" required>
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" name="loginUsername" required>
                 </div>
                 <div>
-                    <label for="adminPassword">Password:</label>
-                    <input type="password" id="adminPassword" name="adminPassword" required>
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
                 </div>
                 <div>
                     <button type="submit">Login</button>
                 </div>
             </form>
+            <form id="registerForm">
+                <div>
+                    <label for="registerUsername">Username:</label>
+                    <input type="text" id="registerUsername" name="registerUsername" required>
+                </div>
+                <div>
+                    <label for="registerPassword">Password:</label>
+                    <input type="password" id="registerPassword" name="registerPassword" required>
+                </div>
+                <div>
+                    <button type="submit">Register</button>
+                </div>
+            </form>
         </section>
-        <section id="admin" class="hidden">
-            <h2>Admin Panel</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Driver Name</th>
-                        <th>Type of Waste</th>
-                        <th>Number of Households</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="adminTableBody">
-                    <!-- Admin data will be populated here -->
-                </tbody>
-            </table>
+        <section id="search" class="hidden">
+            <h2>Search</h2>
+            <form id="searchForm">
+                <div>
+                    <label for="searchQuery">Search:</label>
+                    <input type="text" id="searchQuery" name="searchQuery" required>
+                </div>
+                <div>
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+        </section>
+        <section id="map" class="hidden">
+            <h2>Map</h2>
+            <div id="mapContainer">
+                <div id="map" style="height: 600px;"></div>
+            </div>
         </section>
     </div>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <footer>
+        <p>&copy; 2024 Waste Disposal Management System. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 </html>
